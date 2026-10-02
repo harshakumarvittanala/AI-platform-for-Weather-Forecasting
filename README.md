@@ -1,7 +1,7 @@
 # 🌤️ MausamVani AI (मौसमवाणी / మౌసమ్‌వాణి)
 ### Conversational AI Platform for Weather Forecasting, Alerts, and Climate Intelligence
 
-> **Problem Statement 1**: Conversational AI for Weather Forecasting, Alerts, and Climate Information.  
+> **Problem Statement for a Hackathon**: Conversational AI for Weather Forecasting, Alerts, and Climate Information.  
 > An intelligent, scalable, and multilingual platform providing accurate, contextual weather information, early warnings, and domain-specific decision support across Indian languages through text and voice.
 
 ---
