@@ -243,7 +243,20 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`🌤️ MausamVani AI Backend active at http://localhost:${PORT}`);
   console.log(`📡 Ready to serve real-time weather, multilingual NLP, and decision support.`);
 });
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.warn(`\n⚠️ Port ${PORT} is already in use by another instance.`);
+    console.warn(`👉 MausamVani is already running! You can visit http://localhost:${PORT} in your browser.`);
+    console.warn(`💡 If you want to force-restart it, run: npx kill-port ${PORT} or check Task Manager.\n`);
+    process.exit(0);
+  } else {
+    console.error('Server error:', err);
+    process.exit(1);
+  }
+});
+
